@@ -173,6 +173,13 @@ sub Make()
  	End If
  
  
+	&apos;If there is no pdf output
+ 	If sFormat = &quot;pdf&quot; And (Not oFileAccess.exists(sTmpPath &amp; constOLyFileName &amp; &quot;.pdf&quot;)) Then
+ 		MsgBox(&quot;No pdf output is found&quot;, 0, &quot;Error&quot;)
+  		Exit Sub
+ 	End If
+ 
+ 
 	If bInWriter Then	&apos; We are in Writer...
 		If bWriterInsertViaClipboard Then
 			InsertOOoLilyPondObjectViaClipboard()

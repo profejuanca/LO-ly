@@ -183,7 +183,7 @@ Function ImportBitmapIntoDraw(sURL As String, Optional oGraphicShape) As Object
 	If sFormat = &quot;png&quot; Then
 		oSize.width = oGraphicShape.Graphic.Size.Width/iGraphicDPI*INCH
 		oSize.height = oGraphicShape.Graphic.Size.Height/iGraphicDPI*INCH
-	Else	&apos; svg or eps
+	Else	&apos; svg, pdf or eps
 		&apos; Let&apos;s better not rely on any mysterious dpi values:
 		&apos; oSize.width = oGraphicShape.Graphic.Size.Width/VECTORDPI*INCH
 		&apos; oSize.height = oGraphicShape.Graphic.Size.Height/VECTORDPI*INCH

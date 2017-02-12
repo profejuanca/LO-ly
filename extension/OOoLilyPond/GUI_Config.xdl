@@ -94,5 +94,6 @@
   </dlg:radiogroup>
   <dlg:checkbox dlg:id="bWriterKeepCrop" dlg:tab-index="18" dlg:left="9" dlg:top="166" dlg:width="121" dlg:height="9" dlg:help-text="When editing/replacing an existing object in Writer, preserve its current size and crop settings" dlg:value="Keep Size &amp; Crop Settings" dlg:checked="false"/>
   <dlg:checkbox dlg:id="bImpressKeepCrop" dlg:tab-index="32" dlg:left="9" dlg:top="301" dlg:width="121" dlg:height="9" dlg:help-text="When editing/replacing an existing object in Impress/Draw, preserve its current size and crop settings" dlg:value="Keep Size &amp; Crop Settings" dlg:checked="false"/>
+  <dlg:text dlg:id="Label15" dlg:tab-index="58" dlg:left="156" dlg:top="256" dlg:width="144" dlg:height="8" dlg:value="pdf: LibreOffice 5.3 and newer, not yet usable" dlg:tabstop="false" dlg:nolabel="true"/>
  </dlg:bulletinboard>
 </dlg:window>

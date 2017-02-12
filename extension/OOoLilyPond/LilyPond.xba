@@ -25,6 +25,8 @@ Function CallLilyPond() As Boolean
 		End If
 		If sFormat=&quot;png&quot; Then
 			sCommand = sCommand &amp; &quot; -dno-delete-intermediate-files --png &quot; &amp; sBackendOpt &amp; &quot; -dresolution=&quot; &amp; iGraphicDPI &amp; &quot; &quot; &amp; constOLyFileName &amp; &quot;.ly &gt;&quot; &amp; constOLyFileName &amp; &quot;.out 2&gt;&amp;1; &quot;
+		ElseIf sFormat=&quot;pdf&quot; Then
+			sCommand = sCommand &amp; &quot; -dno-delete-intermediate-files --pdf &quot; &amp; sBackendOpt &amp; &quot; &quot; &amp; constOLyFileName &amp; &quot;.ly &gt;&quot; &amp; constOLyFileName &amp; &quot;.out 2&gt;&amp;1; &quot;
 		ElseIf sFormat=&quot;eps&quot; Then
 			sCommand = sCommand &amp; &quot; &quot; &amp; sBackendOpt &amp; &quot; -f eps &quot; &amp; constOLyFileName &amp; &quot;.ly &gt;&quot; &amp; constOLyFileName &amp; &quot;.out 2&gt;&amp;1; &quot;
 		ElseIf sFormat=&quot;svg&quot; Then
@@ -42,6 +44,8 @@ Function CallLilyPond() As Boolean
 		End If
 		If sFormat=&quot;png&quot; Then
 			sCommand = sCommand &amp; &quot; -dno-delete-intermediate-files --png &quot; &amp; sBackendOpt &amp; &quot; -dresolution=&quot; &amp; iGraphicDPI &amp; &quot; &quot; &amp; constOLyFileName &amp; &quot;.ly &gt;&quot; &amp; constOLyFileName &amp; &quot;.out 2&gt;&amp;1&quot; &amp;Chr(10)
+		ElseIf sFormat=&quot;pdf&quot; Then
+			sCommand = sCommand &amp; &quot; -dno-delete-intermediate-files --pdf &quot; &amp; sBackendOpt &amp; &quot; &quot; &amp; constOLyFileName &amp; &quot;.ly &gt;&quot; &amp; constOLyFileName &amp; &quot;.out 2&gt;&amp;1&quot; &amp;Chr(10)
 		ElseIf sFormat=&quot;eps&quot; Then
 			sCommand = sCommand &amp; &quot; &quot; &amp; sBackendOpt &amp; &quot; -f eps &quot; &amp; constOLyFileName &amp; &quot;.ly &gt;&quot; &amp; constOLyFileName &amp; &quot;.out 2&gt;&amp;1&quot; &amp; Chr(10)
 		ElseIf sFormat=&quot;svg&quot; Then
@@ -75,6 +79,8 @@ Sub CleanUp()
 	If 	oFileAccess.exists(sTmpPath &amp; constOLyFileName &amp; &quot;.ly&quot;) Then oFileAccess.kill(sTmpPath &amp; constOLyFileName &amp; &quot;.ly&quot;)
 	If 	oFileAccess.exists(sTmpPath &amp; constOLyFileName &amp; &quot;Temp.ly&quot;) Then oFileAccess.kill(sTmpPath &amp; constOLyFileName &amp; &quot;Temp.ly&quot;)
 	If 	oFileAccess.exists(sTmpPath &amp; constOLyFileName &amp; &quot;.png&quot;) Then oFileAccess.kill(sTmpPath &amp; constOLyFileName &amp; &quot;.png&quot;)
+	If 	oFileAccess.exists(sTmpPath &amp; constOLyFileName &amp; &quot;.pdf&quot;) Then oFileAccess.kill(sTmpPath &amp; constOLyFileName &amp; &quot;.pdf&quot;)
+	If 	oFileAccess.exists(sTmpPath &amp; constOLyFileName &amp; &quot;-1.pdf&quot;) Then oFileAccess.kill(sTmpPath &amp; constOLyFileName &amp; &quot;-1.pdf&quot;)
 	If 	oFileAccess.exists(sTmpPath &amp; constOLyFileName &amp; &quot;.svg&quot;) Then oFileAccess.kill(sTmpPath &amp; constOLyFileName &amp; &quot;.svg&quot;)
 End Sub
 
